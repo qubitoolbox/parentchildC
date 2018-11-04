@@ -29,8 +29,13 @@ int main()
         else
         {
           
-          if ()
-          {}
+          if (if pd > 100)
+          {
+          
+            start = true;
+          
+          
+          }
           start = false;
           j++;
           printf("CHILD %d\n", i);
