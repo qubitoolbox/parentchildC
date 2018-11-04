@@ -18,19 +18,20 @@ int main()
       
       do
       {
-      
         
-        
-        if(pid > 0)
+        if(pid > 0 && < 100)
         {
-        
+          start = false;
           j++;
           printf("\t\t\tPARENT %d\n", j);
      
         }
         else
         {
-        
+          
+          if ()
+          {}
+          start = false;
           j++;
           printf("CHILD %d\n", i);
         
