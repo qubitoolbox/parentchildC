@@ -12,7 +12,17 @@ int main()
     pid = fork();
     if ( pid > 0)
     {
+      bool start = true;
       
+      do
+      {
+      
+        j++;
+        
+        if(pid > 0)
+      
+      
+      }while(!(start));
     
     
     
