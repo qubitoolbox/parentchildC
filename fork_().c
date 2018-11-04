@@ -17,9 +17,21 @@ int main()
       do
       {
       
-        j++;
+        
         
         if(pid > 0)
+        {
+        
+          j++;
+          printf("\t\t\tPARENT %d\n", j);
+        
+        }
+        else
+        {
+        
+        
+        
+        }
       
       
       }while(!(start));
