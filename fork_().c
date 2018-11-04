@@ -4,8 +4,19 @@
 
 int main()
 {
+  
+  //process ID
+  pid_t pid;
 
-
+    int j;
+    pid = fork();
+    if ( pid > 0)
+    {
+      
+    
+    
+    
+    }
 
 
 
