@@ -24,19 +24,20 @@ int main()
         
           j++;
           printf("\t\t\tPARENT %d\n", j);
-        
+     
         }
         else
         {
         
-        
+          j++;
+          printf("CHILD %d\n", i);
         
         }
       
       
       }while(!(start));
     
-    
+      return (0);
     
     }
 
