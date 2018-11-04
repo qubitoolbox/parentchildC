@@ -19,7 +19,7 @@ int main()
       do
       {
         
-        if(pid > 0 && < 100)
+        if(pid > 0 && pid < 100)
         {
           start = false;
           j++;
@@ -29,7 +29,7 @@ int main()
         else
         {
           
-          if (if pd > 100)
+          if (pid > 100)
           {
           
             start = true;
@@ -40,20 +40,12 @@ int main()
           j++;
           printf("CHILD %d\n", i);
         
-        }
-      
+        }      
       
       }while(!(start));
     
       return (0);
     
     }
-
-
-
-
-
-
-
 
 }
