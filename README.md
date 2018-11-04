@@ -1,0 +1,2 @@
+# parentchildC
+simple fork()
