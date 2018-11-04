@@ -36,7 +36,7 @@ int main()
          
           }
           j++;
-          printf("CHILD %d\n", i);
+          printf("CHILD %d\n", j);
         
         }      
       
