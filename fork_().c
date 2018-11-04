@@ -19,9 +19,9 @@ int main()
       do
       {
         
-        if(pid > 0 && pid < 100)
+        if(pid > 0 && j < 100)
         {
-          start = false;
+          start = true;
           j++;
           printf("\t\t\tPARENT %d\n", j);
      
@@ -29,14 +29,12 @@ int main()
         else
         {
           
-          if (pid > 100)
+          if (j > 100)
           {
           
             start = true;
-          
-          
+         
           }
-          start = false;
           j++;
           printf("CHILD %d\n", i);
         
