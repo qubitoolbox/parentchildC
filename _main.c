@@ -51,3 +51,24 @@ int enlarge(PIXEL* original, int rows, int cols, int scale,
   
   return 0;
 }
+
+/*
+ * This method rotates a 24-bit, uncompressed .bmp file that has been read
+ * in using readFile(). The rotation is expressed in degrees and can be
+ * positive, negative, or 0 -- but it must be a multiple of 90 degrees
+ *
+ * original - an array containing the original PIXELs, 3 bytes per each
+ * rows     - the number of rows
+ * cols     - the number of columns
+ * rotation - a positive or negative rotation,
+ *
+ * new      - the new array containing the PIXELs, allocated within
+ * newrows  - the new number of rows
+ * newcols  - the new number of cols
+ */
+int rotate(PIXEL* original, int rows, int cols, int rotation,
+	   PIXEL** new, int* newrows, int* newcols)
+{
+  /* THIS IS THE METHOD THAT YOU SHOULD WRITE */
+  int c;
+  int r;
