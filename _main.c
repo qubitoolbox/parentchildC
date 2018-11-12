@@ -103,3 +103,55 @@ int rotate(PIXEL* original, int rows, int cols, int rotation,
                             PIXEL* o = original + r*cols + c;
                             PIXEL* n = (*new) + (cols-c-1)*rows + r;
 			    *n = *o;
+				  }
+			}
+		  
+		break;
+		case 180:
+		    *newrows = cols;
+                    *newcols = rows;
+                    *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+			for (r=0; r < rows; r++)
+			{
+			  for (c=0; c < cols; c++) 
+			  {
+
+                            PIXEL* o = original + r * cols + c;
+                            PIXEL* n = (*new) + (rows-r)*cols - (c+1);
+			    *n = *o;
+			  }
+			//}
+		  //}
+		break;
+		case 90:
+		    *newrows = cols;
+                    *newcols = rows;
+                    *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+			if ('-')
+			{
+				
+			}
+			else
+			{
+				
+				
+			}
+			for (r=0; r < rows; r++)
+			{
+			  for (c=0; c < cols; c++) 
+			  {
+
+                            PIXEL* o = original + r*cols + c;
+                            PIXEL* n = (*new) + (cols-c-1)*rows + r;
+			    *n = *o;
+			  }
+			}
+		  
+		break;
+		  }
+	  
+  
+  return 0;
+	}
+	
+	}
