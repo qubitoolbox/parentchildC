@@ -155,3 +155,138 @@ int rotate(PIXEL* original, int rows, int cols, int rotation,
 	}
 	
 	}
+/*
+ * This method rotates a 24-bit, uncompressed .bmp file that has been read
+ * in using readFile(). The rotation is expressed in degrees and can be
+ * positive, negative, or 0 -- but it must be a multiple of 90 degrees
+ *
+ * original - an array containing the original PIXELs, 3 bytes per each
+ * rows     - the number of rows
+ * cols     - the number of columns
+ * rotation - a positive or negative rotation,
+ *
+ * new      - the new array containing the PIXELs, allocated within
+ * newrows  - the new number of rows
+ * newcols  - the new number of cols
+ */
+	
+	
+int rotatenegative(PIXEL* original, int rows, int cols, int rotation,
+	   PIXEL** new, int* newrows, int* newcols)
+{
+  /* THIS IS THE METHOD THAT YOU SHOULD WRITE */
+  int c;
+  int r;
+	  
+	//int option;
+	switch(rotation)	
+    {
+		case 360:
+		  *newrows = rows;
+		  *newcols = cols;
+		  *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+	
+		for (r=0; r < rows; r++)
+		{
+		
+		  for (c = 0; c<cols; c++)
+		  {
+			PIXEL* o = original + r * cols + c;
+			PIXEL* n = (*new) + r*cols + c;
+			*n=*o;
+		  }
+	        }
+		break;
+		case -270:
+			  
+		    *newrows = cols;
+                    *newcols = rows;
+                    *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+			for (r=0; r < rows; r++)
+			{
+			  for (c=0; c < cols; c++) 
+			  {
+                            PIXEL* o = original + r*cols + c;
+                            PIXEL* n = (*new) + (cols-c-1)*rows + r;
+			    *n = *o;
+			  }
+			}
+		  
+		break;
+		case -180:
+		    *newrows = cols;
+                    *newcols = rows;
+                    *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+			for (r=0; r < rows; r++)
+			{
+			  for (c=0; c < cols; c++) 
+			  {
+
+                            PIXEL* o = original + r * cols + c;
+                            PIXEL* n = (*new) + (rows-r)*cols - (c+1);
+			    *n = *o;
+			  }
+				break;
+		case -90:
+		    *newrows = cols;
+                    *newcols = rows;
+                    *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+			if ('-')
+			{
+				
+			}
+			else
+			{
+				
+				
+			}
+			for (r=0; r < rows; r++)
+			{
+			  for (c=0; c < cols; c++) 
+			  {
+
+                            PIXEL* o = original + r*cols + c;
+                            PIXEL* n = (*new) + (cols-c-1)*rows + r;
+			    *n = *o;
+			  }
+			}
+		  
+		break;
+		  }
+	  
+  
+  return 0;
+	}
+	
+	}
+
+/*
+ * This method Vertically flips a 24-bit, uncompressed bmp file
+ * that has been read in using readFile().
+ *
+ * original - an array containing the original PIXELs, 3 bytes per each
+ * rows     - the number of rows
+ * cols     - the number of columns
+ *
+ * new      - the new array containing the PIXELs, allocated within
+ */
+
+int verticalflip (PIXEL *original, PIXEL **new, int rows, int cols)
+{
+  /* THIS IS THE METHOD THAT YOU SHOULD WRITE */
+  
+  int row, col;
+
+  if ((rows <= 0) || (cols <= 0)) return -1;
+
+  *new = (PIXEL*)malloc(rows*cols*sizeof(PIXEL));
+
+  for (row=0; row < rows; row++)
+    for (col=0; col < cols; col++) {
+      PIXEL* o = original + row*cols + col;
+      PIXEL* n = (*new) + row*cols + (cols-1-col);
+      *n = *o;
+    }
+
+  return 0;
+}
