@@ -72,3 +72,34 @@ int rotate(PIXEL* original, int rows, int cols, int rotation,
   /* THIS IS THE METHOD THAT YOU SHOULD WRITE */
   int c;
   int r;
+//int option;
+	switch(rotation)	
+    {
+		case 360:
+		  *newrows = rows;
+		  *newcols = cols;
+		  *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+	
+		for (r=0; r < rows; r++)
+		{
+		
+		  for (c = 0; c<cols; c++)
+		  {
+			PIXEL* o = original + r * cols + c;
+			PIXEL* n = (*new) + r*cols + c;
+			*n=*o;
+		  }
+	        }
+		break;
+		case 270:
+			  
+		    *newrows = cols;
+                    *newcols = rows;
+                    *new = (PIXEL*)malloc((*newrows)*(*newcols)*sizeof(PIXEL));
+			for (r=0; r < rows; r++)
+			{
+			  for (c=0; c < cols; c++) 
+			  {
+                            PIXEL* o = original + r*cols + c;
+                            PIXEL* n = (*new) + (cols-c-1)*rows + r;
+			    *n = *o;
