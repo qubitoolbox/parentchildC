@@ -103,3 +103,93 @@ int main(int argc, char **argv)
     readFile(finn, &r, &c, &b);
   else
     readFile(filein, &r, &c, &b);
+if(oflag)
+  {
+    //printf("\nOpps... Something went wrong.\n");
+    //printf("Type the output file name: ");
+    //scanf("%s\0", fileout);
+    foutt = optargr;
+    //foutt = &fileout[0];
+  }
+  else
+  {
+    printf("Output file name is missing\n");
+    printf("Type a file name for output:");
+    scanf("%s\0", fileout);
+
+
+  }
+  if(sflag)
+  {
+    enlarge(b, r, c, scaleparam, &nb, &nr, &nc);
+    r = nr;
+    c = nc;	
+  }
+  if(rflag && !negflag)
+  {
+    rotate(b, r, c, rotateparam, &nb, &nr, &nc);
+    r = nr;
+    c = nc;
+  }
+  else
+  {
+    rotatenegative(b, r, c, rotateparam, &nb, &nr, &nc);
+    r = nr;
+    c = nc;
+
+
+  }
+  if(vflag)
+  {
+    verticalflip(b, &nb, r, c);
+  }
+  if(fflag)
+  {
+    flip(b, &nb, r, c);
+  }
+	 
+  writeFile(foutt, r, c, nb);
+  free(b);
+  free(nb);
+  
+
+//if (fflag == 0) {	/* -f was mandatory */
+    //fprintf(stderr, "%s: missing -s option\n", argv[0]);
+    //fprintf(stderr, usage, argv[0]);
+//	exit(1);
+  //} else 
+	  /*
+	if ((optind+1) > argc) {	
+	 need at least one argument (change +1 to +2 for two, etc. as needeed) 
+	printf("optind = %d, argc=%d\n", optind, argc);
+	fprintf(stderr, "%s: missing name\n", argv[0]);
+	fprintf(stderr, usage, argv[0]);
+	exit(1);
+  } else if (err) {
+	fprintf(stderr, usage, argv[0]);
+	exit(1);
+  }*/
+	/* see what we have */
+	//printf("debug = %d\n", debug);
+	printf("sflag = %d\n", sflag);
+	printf("vflag = %d\n", vflag);
+	printf("rflag = %d\n", rflag);
+	printf("fflag = %d\n", fflag);
+	printf("oflag = %d\n", oflag);
+	
+	//printf("fname = \"%s\"\n", fname);
+	//printf("sname = \"%s\"\n", sname);
+	
+  if (optind < argc){	/* these are the arguments after the command-line options */
+    for (; optind < argc; optind++){
+      printf("\nargument: \"%s\"\n", argv[optind]);
+      printf("optind %d\n", optind);
+      printf("%s", argv[optind + 1]);}
+     }
+  else
+  {
+    printf("no arguments left to process\n");
+  }
+  
+  return 0;
+}
