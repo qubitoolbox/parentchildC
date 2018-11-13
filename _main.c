@@ -282,8 +282,11 @@ int verticalflip (PIXEL *original, PIXEL **new, int rows, int cols)
   return 0;
 }
 /*
- * This method Vertically flips a 24-bit, uncompressed bmp file
+ * This method horizontally flips a 24-bit, uncompressed bmp file
  * that has been read in using readFile().
+ *
+ * THIS IS GIVEN TO YOU SOLELY TO LOOK AT AS AN EXAMPLE
+ * TRY TO UNDERSTAND HOW IT WORKS
  *
  * original - an array containing the original PIXELs, 3 bytes per each
  * rows     - the number of rows
@@ -291,3 +294,22 @@ int verticalflip (PIXEL *original, PIXEL **new, int rows, int cols)
  *
  * new      - the new array containing the PIXELs, allocated within
  */
+int flip (PIXEL *original, PIXEL **new, int rows, int cols)
+{
+  int row;
+  int col;
+
+  if ((rows <= 0) || (cols <= 0)) return -1;
+
+  *new = (PIXEL*)malloc(rows*cols*sizeof(PIXEL));
+  
+  for (row =0; row < rows; row++)
+    for(col = 0; col<cols; col++)
+    {
+      PIXEL * o= original + row * cols + col;
+      PIXEL* n = (*new) + (cols - col - 1) * cols + row;
+      *n = *o;
+    }
+  return 0;
+}
+
