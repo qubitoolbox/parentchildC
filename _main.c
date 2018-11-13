@@ -19,6 +19,26 @@
  * newrows  - the new number of rows (scale*rows)
  * newcols  - the new number of cols (scale*cols)
  */
+#include <stdlib.h>
+#include <stdio.h>
+#include "bmplib.h"
+#include "bmplib.c"
+
+/*
+ * This method enlarges a 24-bit, uncompressed .bmp file
+ * that has been read in using readFile()
+ *
+ * original - an array containing the original PIXELs, 3 bytes per each
+ * rows     - the original number of rows
+ * cols     - the original number of columns
+ *
+ * scale    - the multiplier applied to EACH OF the rows and columns, e.g.
+ *           if scale=2, then 2* rows and 2*cols
+ *
+ * new      - the new array containing the PIXELs, allocated within
+ * newrows  - the new number of rows (scale*rows)
+ * newcols  - the new number of cols (scale*cols)
+ */
 int enlarge(PIXEL* original, int rows, int cols, int scale,
 	    PIXEL** new, int* newrows, int* newcols)
 {
@@ -51,7 +71,6 @@ int enlarge(PIXEL* original, int rows, int cols, int scale,
   
   return 0;
 }
-
 /*
  * This method rotates a 24-bit, uncompressed .bmp file that has been read
  * in using readFile(). The rotation is expressed in degrees and can be
