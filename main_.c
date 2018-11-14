@@ -1,3 +1,5 @@
+#include "_main.c"
+
 //main
 int main(int argc, char **argv)
 {
