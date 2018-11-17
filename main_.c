@@ -176,7 +176,6 @@ int main(int argc, char **argv)
     writeFile(fileout, r, c, nb);}
   free(b);
   free(nb);
-  
 
 //if (fflag == 0) {	/* -f was mandatory */
     //fprintf(stderr, "%s: missing -s option\n", argv[0]);
