@@ -280,4 +280,3 @@ int flip (PIXEL *original,PIXEL **new, int rows, int cols)
   
   return 0;
 }
-
