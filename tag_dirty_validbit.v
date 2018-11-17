@@ -22,5 +22,9 @@ package cache_def;
     //here we declare the inde values bits
     //bit nine trhough zero.
     bit [9:0]index;
+    //this bit works along the dirty bit
+    //as its set when such is also true
+    bit writeEnabled;
+    
   
   }
