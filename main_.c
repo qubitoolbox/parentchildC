@@ -150,7 +150,7 @@ int main(int argc, char **argv)
   }
   if(vflag)
   {
-    //verticalflip(b, &nb, r, c, &nb, &nr, &nc);
+  //verticalflip(b, &nb, r, c, &nb, &nr, &nc);
   }
   if(fflag)
   {
