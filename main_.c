@@ -83,8 +83,8 @@ int main(int argc, char **argv)
 	  
     }
   }
-	 //retrieves the value that user enters 
-	 //for enlarging image
+  //retrieves the value that user enters 
+  //for enlarging image
   if(sflag)
     scaleparam = atoi(argv[optind++]);
      //value for performing rotation
