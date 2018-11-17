@@ -137,8 +137,6 @@ int rotate(PIXEL* original, int rows, int cols, int rotation,
 	}		  
       break;
   }
-	  
-  
   return 0;
 }
 	
