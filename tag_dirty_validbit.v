@@ -37,11 +37,13 @@ package cache_def;
   
   typedef struct
   {
+    //specifies the address of the cache block
     bit [31:0]addr;
+    // how much information are we preparing to send
     bit [31:0]data;
-    
-  
-  
-  
-  }
+    // works along the dirty bit as well
+    bit readwrite;
+    // set when such value is true in the cache
+    bit valid;
+  }cpu_req_type;
   
