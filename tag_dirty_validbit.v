@@ -13,6 +13,14 @@ package cache_def;
     //value is set to be written to memory.
     bit dirty;
     bit [TAGMSB:TAGLSB]tag;
+  }cache_tag_type;
   
+  //data structure for cache memory request
+  
+  typedef struct
+  {
+    //here we declare the inde values bits
+    //bit nine trhough zero.
+    bit [9:0]index;
   
   }
