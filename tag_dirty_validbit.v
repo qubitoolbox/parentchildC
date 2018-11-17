@@ -47,3 +47,28 @@ package cache_def;
     bit valid;
   }cpu_req_type;
   
+  //cache result from the cache controller to the CPU
+  typedef struct
+  {
+    bit [31:0]data;
+    bit ready;
+  }cpu_result_type;
+  
+  //from data structure to the cache controller 
+  typedef struct
+  {
+    bit [31:0]addr;
+    bit [127:0]data;
+    bit rw;
+    bit valid;
+  }mem_req_type;
+  
+  //memory controller response
+  
+  typedef struct
+  {
+    cache_data_type data;
+    bit ready;
+  }mem_data_type;
+  
+endpackage
