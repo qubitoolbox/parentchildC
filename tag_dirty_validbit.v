@@ -59,7 +59,7 @@ package cache_def;
   {
     bit [31:0]addr;
     bit [127:0]data;
-    bit rw;
+    bit readwrite;
     bit valid;
   }mem_req_type;
   
