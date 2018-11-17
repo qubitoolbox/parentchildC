@@ -79,8 +79,7 @@ int main(int argc, char **argv)
         negval = atoi(argv[optind-1]);
         printf("rotate neg %d\n", negval);
         negflag = 1;
-      break; 
-
+      break;
 	  
     }
   }
