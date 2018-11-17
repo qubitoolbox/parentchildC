@@ -35,4 +35,13 @@ package cache_def;
   //CPU request, coming from the CPU to the
   //cache controller.
   
+  typedef struct
+  {
+    bit [31:0]addr;
+    bit [31:0]data;
+    
+  
+  
+  
+  }
   
