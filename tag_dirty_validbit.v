@@ -25,6 +25,14 @@ package cache_def;
     //this bit works along the dirty bit
     //as its set when such is also true
     bit writeEnabled;
-    
+  }cache_req_type;
   
-  }
+  //128 bit cache line data
+  typedef bit [127:0]cache_data_type;
+  
+  //Cache controller interface
+  //data structures for cpu
+  //CPU request, coming from the CPU to the
+  //cache controller.
+  
+  
