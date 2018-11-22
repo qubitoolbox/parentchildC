@@ -13,8 +13,8 @@ int main()
   pid_t pid;
 
   int j;
-    pid = fork();
-      bool start = true;
+  pid = fork();
+  bool start = true;
       
       do
       {
