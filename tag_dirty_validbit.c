@@ -15,7 +15,6 @@ package cache_def;
   }cache_tag_type;
   
   //data structure for cache memory request
-  
   typedef struct
   {
     //here we declare the inde values bits
