@@ -51,7 +51,7 @@ package cache_def;
     bit [31:0]data;
     bit ready;
   }cpu_result_type;
-  
+
   //from data structure to the cache controller 
   typedef struct
   {
