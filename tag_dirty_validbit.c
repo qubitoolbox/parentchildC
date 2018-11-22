@@ -62,7 +62,6 @@ package cache_def;
   }mem_req_type;
   
   //memory controller response
-  
   typedef struct
   {
     cache_data_type data;
