@@ -22,23 +22,21 @@ int main()
     if(pid > 0 && j < 100)
     {
       start = true;
-          j++;
-          printf("\t\t\tPARENT %d\n", j);
-     
-        }
-        else
-        {
+      j++;
+      printf("\t\t\tPARENT %d\n", j);
+    }
+    else
+    {
           
-          if (j > 100)
-          {
+      if (j > 100)
+      {
           
-            start = true;
-         
-          }
-          j++;
-          printf("CHILD %d\n", j);
+        start = true;
+      }
+        j++;
+        printf("CHILD %d\n", j);
         
-        }      
+      }      
       
       }while(!(start));
     
