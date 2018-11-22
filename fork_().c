@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+//constants
 typedef int bool;
 #define true 1;
 #define false 0;
