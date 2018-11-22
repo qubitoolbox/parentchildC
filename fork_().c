@@ -35,13 +35,11 @@ int main()
       }
         j++;
         printf("CHILD %d\n", j);
-        
-      }      
+     }      
       
-      }while(!(start));
+    }while(!(start));
     
-      return (0);
-    
+    return (0);
     }
 
 }
