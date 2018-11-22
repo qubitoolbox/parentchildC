@@ -12,7 +12,7 @@ int main()
   //process ID
   pid_t pid;
 
-    int j;
+  int j;
     pid = fork();
       bool start = true;
       
