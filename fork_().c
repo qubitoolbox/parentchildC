@@ -16,12 +16,12 @@ int main()
   pid = fork();
   bool start = true;
       
-      do
-      {
+  do
+  {
         
-        if(pid > 0 && j < 100)
-        {
-          start = true;
+    if(pid > 0 && j < 100)
+    {
+      start = true;
           j++;
           printf("\t\t\tPARENT %d\n", j);
      
