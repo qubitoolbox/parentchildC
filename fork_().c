@@ -13,6 +13,9 @@ void check_circuit (int id, int z)
   for (i = 0l i < 16; i++) v[i] = EXTRACT_BIT(z,i);
   
   if ((v[0] || v[1]) && (!v[1] || !v[3]) && (v[2] || v[3])
+      && (!v[3] || !v[4]) && (v[4] || !v[5])
+      && (v[5] || !v[6]) && (v[5] || v[6])
+      &&
    
 
 
