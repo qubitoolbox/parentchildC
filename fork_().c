@@ -8,6 +8,11 @@
 void check_circuit (int id, int z)
 {
   int v[16] ; //each element is a bit of z
+  int i;
+  
+  for (i = 0l i < 16; i++) v[i] = EXTRACT_BIT(z,i);
+  
+  if ((v[0] || v[1]) && (!v[1] || !v[3]) && (v[2] || v[3])
    
 
 
