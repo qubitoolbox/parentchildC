@@ -47,3 +47,13 @@ int main (int argc, char ** argv[]) {
       totalcount = totalcount + 1;
     }  
   }
+  
+  MPI_Reduce(&primemax, &primesum, 1, MPI_INT, MPI_SUM,0,MPI_COMM_WORLD);
+  MPI_Finalize();
+  //returns total running time
+  gettimeofday(&runtime2, 0);
+  printf ("Elapsed time %fs\n", (runtime2.tv_sec-runtime1.tv_sec)+(runtime2.tv_usec-runtime1.tv_usec)*1e-6);
+  fflush(stdout);
+  printf("Total count of primes is %d \n", totalcount);
+  return 0;
+}
