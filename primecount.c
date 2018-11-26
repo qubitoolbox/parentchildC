@@ -39,3 +39,11 @@ int main (int argc, char ** argv[]) {
         break;
       }
     }
+    if (k==j)
+    {
+      printf("Node %d found prime number %d \n", myid, k);
+      fflush(stdout);
+      primesum = k;
+      totalcount = totalcount + 1;
+    }  
+  }
