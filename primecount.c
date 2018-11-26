@@ -28,3 +28,14 @@ int main (int argc, char ** argv[]) {
   MPI_Bcast(&primemin, 1, MPI_INT, 0, MPI_COMM_WORLD);
   //start count of time
   gettimeofday(&runtime1, 0);
+  
+    //Loops to find numbers of primes
+  for (k = 2; k <= primemax; k = k++)
+  {
+    for (j = 2; j < k; j++)
+    {
+      if ((k%j)==0)
+      {
+        break;
+      }
+    }
