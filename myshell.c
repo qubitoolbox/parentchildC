@@ -1,16 +1,3 @@
-/*
- *
- * I affirm originality of this program.
- * Osman D Morales
- *
- * The purpose of this program is to run multi processes
- * with the use of this file called myshell. This program
- * is able to functions such as pipes, redirection, and append.
- *
- *
- * */
-
-
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
