@@ -1,10 +1,3 @@
-/*
- * I affirm originality of this program
- * Osman D Morales
- * This program creates 10 threads and
- * increments a shared variable 6 times.
- *
- * */
 
 #include <stdio.h>
 #include <pthread.h>
