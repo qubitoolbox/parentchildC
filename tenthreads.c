@@ -41,11 +41,11 @@ int main(void)
   int i = 0;
   int val;
   int x;
+  
   //perform ten iterations
   while (i<SIZE)
   {
     pthread_create(&(t0[i]), NULL, acces, (void*)v);
-    
     i++;
   }
 
